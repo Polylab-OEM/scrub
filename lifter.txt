@@ -1,0 +1,47 @@
+[motor]
+name = lifter
+pole pairs = 2
+torque constant = 0.091
+gear ratio = 0.01
+max current = 40
+torque bandwidth = 1000
+shutdown temp = 80
+calibration mode = NOPPDET
+
+[limits]
+max torque = 50
+max velocity = 1000
+max position = 10000000
+min position = -10000000
+max acceleration = 10
+max deceleration = 10
+
+[profile]
+acceleration = 1
+deceleration = 1
+velocity = 2
+
+[output encoder]
+output encoder calibration mode = DIRONLY
+output encoder = AS5047_CENTER
+output encoder mode = REPORT
+
+
+
+[position PID]
+kp = 30.0
+ki = 0.5
+kd = 0.0f
+windup = 1.0
+
+[velocity PID]
+kp = 2.0
+ki = 0.5
+kd = 0.0
+windup = 0.1
+
+[impedance PD]
+kp = 3.5
+kd = 0.25
+
+
